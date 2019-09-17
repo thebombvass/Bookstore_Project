@@ -1,16 +1,19 @@
 /* Color scheme colors: 
-light background green =  rgb(211, 250, 204);
-dark green = rgb(19, 39, 26);
-strong pink = rgb(255, 42, 95);
-tan color = #efeee9
+dark blue = #0f1e32;
+yellow = #eac77d;
+orange = #b47b44;
 */
 
 
 
 /*********** tag level styling **********/
+
 header {
-    background-color: rgb(211, 250, 204);
+    background-color: white;
+    border-bottom: 10px solid #0f1e32;
+    color: #0f1e32;
 }
+
 header div {
     align-self: center;
     margin: 10px;
@@ -20,6 +23,18 @@ header div h5 {
     text-align: end;
 }
 
+footer {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    color: #0f1e32;
+    margin-top: 40px;
+}
+
+/* #wrapper {
+    border: 2px solid black;
+} */
+
 
 /*********** id and class level styling **********/
 /* The header stuff*/
@@ -28,23 +43,78 @@ header div h5 {
     margin: 10px;
 }
 
+#lineOne {
+    background-color: #b47b44;
+    width: 95%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 10px;
+}
+
+#lineTwo {
+    background-color: #eac77d;
+    width: 90%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 10px;
+}
+
 /* For the store opening ad */
 #storeOpeningAd {
-    border: 2px solid rgb(19, 39, 26);
+    border: 3px solid #0f1e32;
+    border-radius: 5px;
     padding: 2%;
     width: 80%;
-    margin: 5%;
     background-image: url(../booksopen.jpg);
     background-size: cover;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: #0f1e32;;
+}
+
+#storeOpeningAd button {
+    background-color:  #f4fafd;
+}
+
+form {
+    background-color: #0f1e32;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+select {
+    width: 20%;
+}
+
+#lineFirst {
+    background-color: #b47b44;
+    width: 95%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 10px;
+}
+
+#lineSecond {
+    background-color: #eac77d;
+    width: 90%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 10px;
 }
 
 /* The flip card container */
+#booksTable {
+    width: 100%;
+    margin-top: 40px;
+}
+
 .flip-card {
-    width: 300px;
-    height: 200px;
+    width: 200px;
+    height: 300px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
-  
+
 /* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
@@ -53,6 +123,11 @@ header div h5 {
     text-align: center;
     transition: transform 1s;
     transform-style: preserve-3d;
+}
+
+.flip-card-front img {
+    height: 100%;
+    width: 190px;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -70,13 +145,33 @@ header div h5 {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-    background-color: #bbb;
-    color: black;
+    background-color: #0f1e32;
 }
 
 /* Style the back side */
 .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
+    background-color:#0f1e32;
+    color: whitesmoke;
     transform: rotateY(180deg);
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+
+}
+
+.flip-card-back a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container-fluid {
+    color: #0f1e32;
 }

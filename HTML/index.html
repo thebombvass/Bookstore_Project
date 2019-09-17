@@ -6,54 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bookstore</title>
     <link rel="stylesheet" type="text/css" href="../styles/bookstore.css">
+    <link rel="stylesheet" href="./fancybox-master/dist/jquery.fancybox.min.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
     <header class="d-flex">
-        <img src="../bookstore_logo.png" alt="bookstore logo image" id=logo>
+        <img src="../bookstorelogo.png" alt="bookstore logo image" id=logo>
         <div>
         <h1>Bookstore</h1>
         <h5>Online store</h5>
         </div>
     </header>
+    <div id="lineOne"></div>
+    <div id="lineTwo"></div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="wrapper">
         <div class="container-fluid text-center" id="storeOpeningAd">
             <h2>Store Opening Soon!</h2>
             <p>Look out for out for announcement of our grand opening party on blah</p>
-            <p>sign up for out mailing list to be alerted</p>
+            <p>sign up for our mailing list to be invited to our party!</p>
             <button>Email me!</button>
         </div>
 
         <div class="container-fluid" id="onlineStore">
-            <div>
+            <div class="text-center">
             <h2>Online Store</h2>
             <p>find exactly what you need</p>
             </div>
 
-            <div id="filters">
-                <p>input here for 'show limit' 'sort by' and search bar</p>
+            <div class="d-flex flex-column align-items-end">
+            <form>
+                <div class="row">
+                <span class="col-md-6"></span>
+                <input class="col-md-2 mx-2" type="text" placeholder="search by title" id="search">
+                <select class="col-md-1 mbd-select mx-2" id="sortSelect">
+                    <option value="" disabled selected>Sort by...</option>
+                    <option value="AZ">Title: A-Z</option>
+                    <option valu="ZA">Title: Z-A</option>
+                </select>
+                <select class="col-md-1 mdb-select mx-2" id="langSelect">
+                    <option value="All" selected>All</option>
+                    <option value="EN">English only</option>
+                    <option value="ES">Español only</option>
+                    <option value="CA">Catalan only</option>
+                </select>
             </div>
-
-            <div id='physicalSeparation'>
-                <hr>
+            </form>
+            <div id="lineFirst"></div>
+            <div id="lineSecond"></div>
             </div>
 
             <div class="container-fluid">
                 <table id="booksTable">
                 </table>
             </div>
-
-            <footer>
-                The Bookstore 2019 ©
-            </footer>
-
+        </div>
         </div>
 
-    </div>
+        <footer>
+            The Bookstore 2019 ©
+        </footer>
+
     <script type="text/javascript" src="../JS/bookstore.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+
 </body>
 </html>
